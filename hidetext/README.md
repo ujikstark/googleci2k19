@@ -1,4 +1,4 @@
-# Hide text on image
+# Hide text on image BY UJIKSTARK
 
 **Encrypte hide text to image**
 1. type `python hidetext.py -e 'filename.jpg/png' 'text random'`
