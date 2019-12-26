@@ -1,2 +1,4 @@
-`# What is the Different between Integration Sympy and Scipy ?`
+# What is the Different between Sympy and Scipy ?
+
+` - **Sympy :**
 
