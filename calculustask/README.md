@@ -2,7 +2,7 @@
 
 - **SymPy :**
 1. SymPy is a Python library for Symbolic Computation in Mathematics.
-   - did you know that ? .Sympy is familiar for open source Symbolic Computation build in python
+   <span style:'color:blue'>did you know that ? .Sympy is familiar for open source Symbolic Computation build in python</span>
 
 2. SymPy can use for a bit Numeric Expression
 3. Sympy is Computer Algebra System
