@@ -4,14 +4,14 @@
 
 <h4>we can try this code for comparing :</h4>
 
-`import numpy as np
- import timeit
+    import numpy as np
+    import timeit
 
- a = list(range(1000))
- b = np.array(range(1000))
+    a = list(range(1000))
+    b = np.array(range(1000))
 
- print("Time only python : ", timeit.timeit("[i + 1 for i in a]", setup="from __main__ import a", number=100000))
- print("Time with numpy : ", timeit.timeit("np.add(1,b)", setup="from __main__ import np, b", number=100000))`
+    print("Time only python : ", timeit.timeit("[i + 1 for i in a]", setup="from __main__ import a", number=100000))
+    print("Time with numpy : ", timeit.timeit("np.add(1,b)", setup="from __main__ import np, b", number=100000))`
 
 <h4>and the result looks like this :</h4>
 
