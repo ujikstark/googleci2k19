@@ -1,6 +1,8 @@
 # How to Run this script ?
 **1. First thing first , run the script `python3 run_data.py`**
+
 **2. Open new terminal and run this script `python3 setup.py`**
+
 **3. Wait until done! :)**
 
 
