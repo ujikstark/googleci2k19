@@ -1,17 +1,13 @@
 from PIL import Image
-import os
-     
+import os, sys
+
+os.chdir(os.path.expanduser("~"))
+
 file_image = input("Image : ") #input user
-pic = Image.open(file_image) #open file
 
-if pic.mode in ("RGBA", "P"):
-    pic = pic.convert("RGB")
+for i in os.listdir(file_image):
+	pic = Image.open(os.path.join(file_image, i)) #open file
 
-print("Pixel Image : " + str(pic.size)) #pixel image
-print('-'*28)
-
-pic_resize = pic.resize((400,400)) #resize picture
-print("Resize Pixel to : " + str(pic_resize.size)) #pixel with resize
 
 def new_file(dir1): #make a dir
     try:
@@ -19,21 +15,24 @@ def new_file(dir1): #make a dir
             os.makedirs(dir1)
     except OSError:
         print('Error: Creating Directory. ' +  dir1)
-        
 
-new_file('./result/')
+ 
+list_dir = os.listdir(file_image)
+wanna_size = 400
 
-name_image = input("Name of new picture : ") #input new name of the picture
-print("Success!!", name_image)
+def start():
+	global pic
+	for i in list_dir:
+		if os.path.isfile(file_image+i):
+			x, y = os.path.splitext(file_image + 'result/' + i)
+			size = pic.size	
+			ratio = float(wanna_size) / max(size)
+			round_image= tuple([int(a*ratio) for a in size])
+			pic = pic.resize(round_image, Image.ANTIALIAS)
+			result = Image.new("RGB", (wanna_size, wanna_size))
+			result.paste(pic, ((wanna_size - round_image[0]) // 2, (wanna_size - round_image [1]) // 2))	
+			show = result.save(x + 'ujik.jpg', quality=100)
+			print("Success!!" , x + 'ujik.jpg')
 
-pic_result = './result/' + name_image
-
-result = pic_resize.save(pic_result, quality=85) #save file with quality
-pic1 = Image.open(pic_result)
-print("Format File : " + pic1.format)
-
-
-bytes1 = int(len(pic1.fp.read())) 
-hasil = bytes1 / 1000 #convert to KiloBytes
-print("Size File :", hasil, 'KB') 
-
+new_file(file_image + '/result/')
+start()
