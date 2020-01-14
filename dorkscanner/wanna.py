@@ -40,7 +40,7 @@ def in_bing():
 	for x in url_result:
 		print(x)
 
-dork = input("Your Dork : ")
+dork = input("Your Dork $ ")
 
 print("1 = Google\n2 = Bing\nYou can type 1 or 2")
 searching = input("Searching : ")
@@ -49,4 +49,6 @@ if searching is '1':
 	in_google()
 elif searching is '2':
 	in_bing()
-		
+else:
+	print("ERROR!!")
+	
