@@ -8,7 +8,6 @@
 
 ## How to use that ?
 i make it with python3 so let's do it :)
-this steps i use for default folder my github :
 1. open terminal and python3 ujik.py
 2. and will appear `Image : ` fill this with your dir you wanna resize , don't forget to use `/` after the dir
 3. and done the pixel being 400,400 
