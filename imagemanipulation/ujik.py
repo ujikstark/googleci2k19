@@ -24,6 +24,7 @@ def start():
 	global pic
 	for i in list_dir:
 		if os.path.isfile(file_image+i):
+			pic = Image.open(file_image+i)
 			x, y = os.path.splitext(file_image + 'result/' + i)
 			size = pic.size	
 			ratio = float(wanna_size) / max(size)
