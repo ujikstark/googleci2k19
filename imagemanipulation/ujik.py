@@ -30,7 +30,7 @@ def start():
 			round_image= tuple([int(a*ratio) for a in size])
 			pic = pic.resize(round_image, Image.ANTIALIAS)
 			result = Image.new("RGB", (wanna_size, wanna_size))
-			result.paste(pic, ((wanna_size - round_image[0]) // 2, (wanna_size - round_image [1]) // 2))	
+			result.paste(pic, ((wanna_size - round_image[0]) // 2, (wanna_size - round_image[1]) // 2))	
 			show = result.save(x + 'ujik.jpg', quality=100)
 			print("Success!!" , x + 'ujik.jpg')
 
