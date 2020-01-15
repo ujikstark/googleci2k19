@@ -4,6 +4,8 @@ import os, sys
 os.chdir(os.path.expanduser("~"))
 
 file_image = input("Image : ") #input user
+print("You can type Quality from 1-100")
+quality = int(input("Quality : "))
 
 for i in os.listdir(file_image):
 	pic = Image.open(os.path.join(file_image, i)) #open file
@@ -32,7 +34,7 @@ def start():
 			pic = pic.resize(round_image, Image.ANTIALIAS)
 			result = Image.new("RGB", (wanna_size, wanna_size))
 			result.paste(pic, ((wanna_size - round_image[0]) // 2, (wanna_size - round_image[1]) // 2))	
-			show = result.save(x + 'ujik.jpg', quality=100)
+			show = result.save(x + 'ujik.jpg', quality=quality)
 			print("Success!!" , x + 'ujik.jpg')
 
 new_file(file_image + '/result/')
