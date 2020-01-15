@@ -30,7 +30,7 @@ def start():
 			x, y = os.path.splitext(file_image + 'result/' + i)
 			size = pic.size	
 			ratio = float(wanna_size) / max(size)
-			round_image= tuple([int(a*ratio) for a in size])
+			round_image= tuple([int(wanna_size) for a in size])
 			pic = pic.resize(round_image, Image.ANTIALIAS)
 			result = Image.new("RGB", (wanna_size, wanna_size))
 			result.paste(pic, ((wanna_size - round_image[0]) // 2, (wanna_size - round_image[1]) // 2))	
