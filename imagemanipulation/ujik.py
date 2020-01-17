@@ -1,5 +1,6 @@
 from PIL import Image
 import os, sys
+from termcolor import colored
 
 os.chdir(os.path.expanduser("~"))
 
@@ -26,23 +27,20 @@ def start():
 	global pic
 	for i in list_dir:
 		if os.path.isfile(file_image+i):
-			#open all image
 			pic = Image.open(file_image+i)
 			x, y = os.path.splitext(file_image + 'result/' + i)
 			
-			#set the pixel
 			size = pic.size
 			wei_ave = (wanna_size / float(size[0]))
 			hei_size = int((float(pic.size[1]) * float(wei_ave)))
 			ratio = float(wanna_size) / max(size)
 			round_image= tuple([int(wanna_size) for a in size])
 			
-			#resize and save
 			pic = pic.resize((wanna_size, hei_size), Image.ANTIALIAS)
 			result = Image.new("RGB", (wanna_size, hei_size))
 			result.paste(pic, ((wanna_size - round_image[0]) // 2, (wanna_size - round_image[1]) // 2))	
 			show = result.save(x + 'ujik.jpg', quality=quality)
-			print("Success!!" , x + 'ujik.jpg')
+			print(colored(f"Success!! {x+'ujik.jpg'}","green"))
 
 new_file(file_image + '/result/')
 start()
