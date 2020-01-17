@@ -3,6 +3,7 @@
 ## PIP you should install
 1. Pillow
 2. os
+3. termcolor
 
 ### The path is default to home dir on linux
 
