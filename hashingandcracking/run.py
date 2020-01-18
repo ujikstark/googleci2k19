@@ -1,3 +1,6 @@
+## Created By Ujikstark
+
+#!/usr/bin/env python3
 import hashlib
 from termcolor import colored
 import hashing
