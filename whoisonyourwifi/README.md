@@ -5,4 +5,4 @@
 2. socket
 3. termcolor
 
-** Easy to used :) **
+**Easy to used :)**
