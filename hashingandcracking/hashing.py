@@ -4,8 +4,6 @@
 import hashlib
 from termcolor import colored
 
-import hashlib
-from termcolor import colored
 
 def hash_md5():
 	md5 = hashlib.md5()
